@@ -27,7 +27,7 @@ router.get('/cart', articulos.getCart)
 
 router.get('*', function(req, res) {
   res.send({
-    error: 'This route does not exist, try /users or /todos'
+    error: 'This route does not exist'
   })
 })
 
