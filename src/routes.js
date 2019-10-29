@@ -23,10 +23,7 @@ router.get('/articulos/foils', articulos.getFoils)
 router.get('/articulos/marbled', articulos.getMarbled)
 router.post('/articulos', auth, articulos.createArticle)
 
-router.get('/cart', auth, articulos.getCart)
-router.post('/cart', auth, articulos.addToCart)
-router.post('/cart/checkout', auth, articulos.checkout)
-router.delete('/cart/:id', auth, articulos.deleteFromCart)
+router.get('/cart', articulos.getCart)
 
 router.get('*', function(req, res) {
   res.send({

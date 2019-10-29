@@ -23,24 +23,5 @@ $('#createArticleButton').on('click', function(){
 
   //console.log(json_to_send)
 
-  $.ajax({
-    url: 'http://localhost:3000/articulos',
-    headers: {
-        'Content-Type':'application/json',
-        'Authorization': 'Bearer ' + token
-    },
-    method: 'POST',
-    dataType: 'json',
-    data: json_to_send,
-    success: function(){
-      alert("Articulo creado con exito")
-      //console.log('success: '+ data);
-      window.location = './library.html'
-    },
-    error: function(error) {
-      console.log(error)
-      alert(error["responseText"]);
-      window.location = './index.html' //se direcciona a esta pagina
-    }
-  });
+  
 })

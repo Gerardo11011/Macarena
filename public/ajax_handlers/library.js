@@ -18,9 +18,11 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
+        if (data[i].type == 'acrylics'){
         // aqui va su código para agregar los elementos de la lista
         var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
         $("#acrylicArticles").append(div)
+      }
       }
     },
     error: function(error_msg) {
@@ -40,9 +42,12 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
+        if (data[i].type == 'card'){
+          var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
+          $("#cardArticles").append(div)
+        }
         // aqui va su código para agregar los elementos de la lista
-        var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
-        $("#cardArticles").append(div)
+
       }
     },
     error: function(error_msg) {
@@ -62,10 +67,12 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
+        if (data[i].type == 'foils'){
         // aqui va su código para agregar los elementos de la lista
         var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
         $("#foilArticles").append(div)
       }
+    }
     },
     error: function(error_msg) {
       alert((error_msg['responseText']));
@@ -84,10 +91,12 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
+        if (data[i].type == 'marbled'){
         // aqui va su código para agregar los elementos de la lista
         var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
         $("#marbledArticles").append(div)
       }
+    }
     },
     error: function(error_msg) {
       alert((error_msg['responseText']));
