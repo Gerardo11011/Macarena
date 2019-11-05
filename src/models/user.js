@@ -54,11 +54,11 @@ const userSchema = new mongoose.Schema({
     virtuals: true
   },
   toJSON: {
-    virtuals: true 
+    virtuals: true
   }
 })
 
-// una relacion entre dos Schemas, no lo guarda, es virtual 
+// una relacion entre dos Schemas, no lo guarda, es virtual
 userSchema.virtual('todos', {
   ref: 'Todo',
   localField: '_id',
@@ -84,7 +84,7 @@ userSchema.methods.toJSON = function() {
 //   const match = await bcrypt.compare(password, user.password);
 //   if (match) {
 //     return user
-//   } 
+//   }
 //   throw new Error('Wrong password!');
 // }
 
@@ -130,11 +130,10 @@ userSchema.pre('save', function(next) {
       return next(error)
     })
   } else {
-    next()  
+    next()
   }
 })
 
 const User = mongoose.model('User', userSchema)
 
 module.exports = User
-
