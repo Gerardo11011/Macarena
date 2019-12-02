@@ -11,7 +11,7 @@ const getUsers = function(req, res) {
 
 const getUser = function(req, res) {
   // cualquier usuario no deberia ser capaz de ver la info de un usuario
-  // a menos que sea un admin. Aqui yo ya no admitire que me pasen el :id 
+  // a menos que sea un admin. Aqui yo ya no admitire que me pasen el :id
   // solo usare el id de la request-> req.user._id
   // como ya tenemos toda la info del usuario gracias a auth
   // ya no necesitamos hacer un User.findOne de nuevo!,
@@ -24,7 +24,7 @@ const getUser = function(req, res) {
   //     return res.status(404).send()
   //   }
   User.findById( req.user._id ).populate('todos').exec(function(error, user) {
-  // req.user.populate('todos').exec(function(error, user) {  
+  // req.user.populate('todos').exec(function(error, user) {
     // user ya tiene la info de req.user y req.user.todos
     return res.send(user)
   })
