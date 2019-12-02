@@ -35,7 +35,6 @@ function deleteFromCart(articleId) {
   $.ajax({
 
      url: 'http://localhost:3000/cart/' + this.id,
-      // url: 'https://tuapp.herokuapp.com/todos',
       headers: {
           'Content-Type':'application/json',
           'Authorization': 'Bearer ' + token
@@ -57,7 +56,6 @@ $(document).ready(function() {
   $.ajax({
 
      url: 'http://localhost:3000/cart',
-    // url: 'https://tuapp.herokuapp.com/todos',
     headers: {
         'Content-Type':'application/json',
         'Authorization': 'Bearer ' + token
