@@ -34,6 +34,7 @@ const articuloSchema = new mongoose.Schema({
       }
     }
   }
+
 })
 
 const Articulo = mongoose.model('Articulo', articuloSchema)

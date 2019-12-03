@@ -174,7 +174,6 @@
 		onAuthorize: function(data, actions) {
 		  return actions.payment.execute().then(function() {
 			// Show a confirmation message to the buyer
-<<<<<<< HEAD
 			//document.getElementById("cart_body").innerHTML = ""
 			//document.getElementById("cart_total").innerHTML = "0.0"
 			$.ajax({
@@ -197,10 +196,6 @@
 		      window.location = './index.html' //se direcciona a esta pagina
 		    }
 		  });
-=======
-			window.alert('Gracias por comprar en Macarena');
-			// window.location = './index.html'
->>>>>>> 9c2f6202a5f215b181874484848eaafcb707d87b
 		  });
 		}
 	  }, '#paypal-button');
