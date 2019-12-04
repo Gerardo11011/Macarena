@@ -112,7 +112,7 @@ function createElement(id, nombre, precio, descripcion, stock) {
     var innerHtml = `
             <div class="mt-25px mb-25px wow fadeInLeft" data-wow-delay="0.6s">
             <div class="card">
-                <img src="macarena_logo.png" alt="Avatar" style="width:50%" class="ml-70px mt-25px mb-10px" >
+                ${nombre == 'tarjeta 1' ? '<img src="macarena-icon.png" alt="Avatar" style="width:50%" class="ml-70px mt-25px mb-10px" >' :'<img src="macarena_logo.png" alt="Avatar" style="width:50%" class="ml-70px mt-25px mb-10px" >'}
                 <h1>${nombre}</h1>
                 <p class="price">$${precio}</p>
                 <p>${descripcion}</p>
