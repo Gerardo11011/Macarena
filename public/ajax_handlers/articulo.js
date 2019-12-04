@@ -22,6 +22,24 @@ $('#createArticleButton').on('click', function(){
   json_to_send = JSON.stringify(json_to_send);
 
   //console.log(json_to_send)
+  $.ajax({
+    url: 'http://localhost:3000/articulos',
+    headers: {
+        'Content-Type':'application/json',
+        'Authorization': 'Bearer ' + token
+    },
+    method: 'POST',
+    dataType: 'json',
+    data: json_to_send,
+    success: function(){
+      alert("Articulo creado con exito")
+      window.location = './articulos.html' //se direcciona a esta pagina
+    },
+    error: function(error) {
+      console.log(error)
+      alert(error["responseText"]);
+    }
+  });
 
-  
+
 })

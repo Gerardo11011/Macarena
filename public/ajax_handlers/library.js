@@ -18,7 +18,7 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
-        if (data[i].type == 'acrylics'){
+        if (data[i].type == 'acrilico'){
         // aqui va su código para agregar los elementos de la lista
         var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
         $("#acrylicArticles").append(div)
@@ -42,7 +42,7 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
-        if (data[i].type == 'card'){
+        if (data[i].type == 'carta'){
           var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
           $("#cardArticles").append(div)
         }
@@ -67,7 +67,7 @@ $(document).ready(function() {
       //console.log(data)
 
       for( let i = 0; i < data.length; i++) {
-        if (data[i].type == 'foils'){
+        if (data[i].type == 'foiled'){
         // aqui va su código para agregar los elementos de la lista
         var div = createElement(data[i]._id, data[i].name, data[i].price, data[i].description, data[i].stock)
         $("#foilArticles").append(div)
